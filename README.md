@@ -45,11 +45,6 @@ This approach ensures a smooth and cost-optimized migration to the AWS cloud, pr
 - Amazon VPC: Virtual Private Cloud (VPC) for a secure and isolated network environment for your application.
 - AWS CloudTrail: CloudTrail for logging all API calls made to AWS account, aiding in cost monitoring and security analysis.
 
-<h3>Following Best Practices:</h3>
-
-- Security: security best practices like IAM roles for least privilege access control and Amazon Security Groups for network access control.
-- Monitoring and Logging: Amazon CloudWatch for monitoring application performance, resource utilization, and cost metrics.
-
 <h3>Data Flow:</h3>
 
 1. The source database is located on premise. We utilize an EC2 instance with the DMS software installed to extract data from the on-premise database.
