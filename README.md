@@ -52,6 +52,16 @@ This approach ensures a smooth and cost-optimized migration to the AWS cloud, pr
 
 <h3>Data Flow:</h3>
 
+1. The source database is located on premise. We utilize an EC2 instance with the DMS software installed to extract data from the on-premise database.
+2. Extrated database on ec2 instace is now transfered to the target database, which is Amazon RDS.
+3. Application components are migrated to EC2 instances, potentially using containerization technologies like Docker.
+4. The migrated application communicates with the RDS database using secure connections.
+5. The application retrieves and stores data from S3 buckets as needed.
+6. User requests are routed through the internet; DNS service(Route 53) directs traffic to CloudFront.
+7. Static content is delivered directly from CloudFront edge locations to users for faster access.
+8. Amazon CloudFront checks if the requested content is available in its edge caches. If the content is cached, it delivers it directly to the user from the nearest edge location, significantly reducing latency. If the content is not cached, it retrieves it from the origin server through the application load balancer and caches it for future requests.
+9. Requests fromt cloudFront distributes traffic across multiple EC2 instances running the web server tier.
+
 
 
 <!--
