@@ -62,7 +62,17 @@ This approach ensures a smooth and cost-optimized migration to the AWS cloud, pr
 8. Amazon CloudFront checks if the requested content is available in its edge caches. If the content is cached, it delivers it directly to the user from the nearest edge location, significantly reducing latency. If the content is not cached, it retrieves it from the origin server through the application load balancer and caches it for future requests.
 9. Requests fromt cloudFront distributes traffic across multiple EC2 instances running the web server tier.
 
+<h3>Following best practices:</h3>
 
+- Amazon CloudWatch: collects and monitors data from all tiers (EC2 instances, RDS, ELB), including performance metrics, resource utilization, and application logs.
+- Security: security best practices like IAM roles for least privilege access control and Amazon Security Groups for network access control.
+
+<h3>Cost Optimization:</h3>
+
+- Reserved Instances: Provide significant discounts for predictable workloads compared to on-demand pricing.
+- Auto Scaling: Optimizes resource utilization by scaling instances according to actual demand.
+- Spot Instances: Offer the most cost-effective option for workloads with flexible resource requirements.
+- Minimize data transfer costs by: placing frequently accessed data in cost-effective storage tiers (e.g., Amazon S3 Standard for infrequently accessed data). Utilizing data transfer acceleration services like AWS Transfer Acceleration for faster and more cost-effective data transfers between on-premises and AWS.
 
 <!--
  ```diff
