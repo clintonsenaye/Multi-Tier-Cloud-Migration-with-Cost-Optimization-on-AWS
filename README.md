@@ -11,7 +11,7 @@ This project outlines a cost-effective strategy for migrating a multi-tier appli
   - Leveraging CloudFront, a Content Delivery Network, to improve user experience and potentially reduce costs associated with serving static content.
   - Following AWS Well-Architected best practices for security, monitoring, and disaster recovery.
 
-This approach ensures a smooth and cost-optimized migration to the AWS cloud, providing scalability, reliability, and improved performance for your application.
+Using this approach, one can smoothly and cost-effectively migrate an application to the AWS cloud. This will give you the benefits of scalability, reliability, and improved performance.
 <br />
 
 
